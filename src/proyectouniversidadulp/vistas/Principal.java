@@ -5,6 +5,7 @@
  */
 package proyectouniversidadulp.vistas;
 
+import proyectouniversidadulp.vistas.CargarNotas;
 import static sun.net.www.http.HttpClient.New;
 
 /**
@@ -85,6 +86,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu2.setText("Materias");
 
         jMenuItem2.setText("Administrar Materias");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
@@ -111,6 +117,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu9.setText("Carga de notas");
 
         jMenuItem5.setText("Manipulacion de Notas");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu9.add(jMenuItem5);
 
         jMenuBar1.add(jMenu9);
@@ -179,6 +190,26 @@ public class Principal extends javax.swing.JFrame {
         escritorio.add(aw);
         escritorio.moveToFront(aw);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        VistaMaterias aw= new VistaMaterias();
+        aw.setVisible(true);
+        escritorio.add(aw);
+        escritorio.moveToFront(aw);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        CargarNotas aw= new CargarNotas();
+        aw.setVisible(true);
+        escritorio.add(aw);
+        escritorio.moveToFront(aw);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
