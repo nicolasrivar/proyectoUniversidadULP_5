@@ -110,6 +110,11 @@ public class Principal extends javax.swing.JFrame {
         jMenu8.setText("Inscripciones");
 
         jMenuItem4.setText("Manejo Inscripciones");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMenuItem4);
 
         jMenuBar1.add(jMenu8);
@@ -210,6 +215,16 @@ public class Principal extends javax.swing.JFrame {
         escritorio.add(aw);
         escritorio.moveToFront(aw);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        vistainscripcion aw= new vistainscripcion();
+        aw.setVisible(true);
+        escritorio.add(aw);
+        escritorio.moveToFront(aw);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     /**
      * @param args the command line arguments
