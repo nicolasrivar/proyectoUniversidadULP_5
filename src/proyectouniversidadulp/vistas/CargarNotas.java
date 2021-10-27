@@ -105,6 +105,11 @@ public class CargarNotas extends javax.swing.JInternalFrame {
         });
 
         jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -165,6 +170,11 @@ public class CargarNotas extends javax.swing.JInternalFrame {
         inscripcionData.actualizarNota(Integer.parseInt(id), Double.parseDouble(nota));
         JOptionPane.showMessageDialog(this, "se ha cambiado la nota a "+ nota);
     }//GEN-LAST:event_jButtonGuardarActionPerformed
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        // TODO add your handling code here:
+        cargarDatos();
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     public void cargarAlumnos(){
         for(Alumno i: listaAlumnos){
